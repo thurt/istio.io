@@ -14,9 +14,6 @@ buildFuture = true
 ignoreFiles = [ "OWNERS" ]
 staticDir = ["static", "generated"]
 
-# we use Netlify server-side redirects instead of generated aliases
-disableAliases = true
-
 # MARKDOWN
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
 [blackfriday]
@@ -28,7 +25,7 @@ disableAliases = true
     extensions = [""]
 
 [outputs]
-  home = ["HTML", "RSS", "REDIR"]
+  home = ["HTML"]
   section = ["HTML"]
 
 [mediaTypes]
@@ -65,6 +62,6 @@ disableAliases = true
 # internationalization
 [languages]
     [languages.zh]
-        contentDir = "content_zh"
+        contentDir = "empty/zh"
     [languages.en]
-        contentDir = "content"
+        contentDir = "empty/en"
